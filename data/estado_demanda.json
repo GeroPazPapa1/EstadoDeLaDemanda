@@ -1,93 +1,93 @@
 {
-  "semana_label": "Semana del 03 al 09 de agosto de 2026",
-  "fecha_desde": "2026-08-03",
-  "fecha_hasta": "2026-08-09",
-  "archivo_origen": "estado de la demanda 3 agosto.xlsx",
+  "semana_label": "Semana del 10 al 16 de agosto de 2026",
+  "fecha_desde": "2026-08-10",
+  "fecha_hasta": "2026-08-16",
+  "archivo_origen": "personas_2026-08-10_2026-08-16.xlsx",
   "total": {
-    "se_contacta": 3310,
-    "no_se_contacta": 2774,
-    "sin_cubrir": 112,
-    "desestimado": 800,
-    "total": 6996
+    "se_contacta": 3297,
+    "no_se_contacta": 2692,
+    "sin_cubrir": 382,
+    "desestimado": 684,
+    "total": 7055
   },
   "zonas": {
     "priorizada": {
       "nombre": "Zona priorizada (C. 2 - 13 - 14)",
       "resumen": {
-        "se_contacta": 1361,
-        "no_se_contacta": 1015,
-        "sin_cubrir": 0,
-        "desestimado": 103,
-        "total": 2479
+        "se_contacta": 1367,
+        "no_se_contacta": 961,
+        "sin_cubrir": 1,
+        "desestimado": 70,
+        "total": 2399
       },
       "canales": {
         "108": {
-          "se_contacta": 481,
-          "no_se_contacta": 483,
+          "se_contacta": 532,
+          "no_se_contacta": 416,
           "sin_cubrir": 0,
-          "desestimado": 19,
-          "total": 983
+          "desestimado": 6,
+          "total": 954
         },
         "Colaborativa / 911": {
-          "se_contacta": 417,
-          "no_se_contacta": 460,
-          "sin_cubrir": 0,
-          "desestimado": 83,
-          "total": 960
+          "se_contacta": 380,
+          "no_se_contacta": 424,
+          "sin_cubrir": 1,
+          "desestimado": 61,
+          "total": 866
         },
         "Espontáneas": {
-          "se_contacta": 442,
-          "no_se_contacta": 32,
+          "se_contacta": 434,
+          "no_se_contacta": 72,
           "sin_cubrir": 0,
-          "desestimado": 0,
-          "total": 474
+          "desestimado": 2,
+          "total": 508
         },
         "Particulares": {
           "se_contacta": 21,
-          "no_se_contacta": 40,
+          "no_se_contacta": 49,
           "sin_cubrir": 0,
           "desestimado": 1,
-          "total": 62
+          "total": 71
         }
       }
     },
     "resto": {
       "nombre": "Resto de la ciudad",
       "resumen": {
-        "se_contacta": 1949,
-        "no_se_contacta": 1759,
-        "sin_cubrir": 112,
-        "desestimado": 697,
-        "total": 4517
+        "se_contacta": 1930,
+        "no_se_contacta": 1731,
+        "sin_cubrir": 381,
+        "desestimado": 614,
+        "total": 4656
       },
       "canales": {
         "108": {
-          "se_contacta": 1033,
-          "no_se_contacta": 1079,
-          "sin_cubrir": 85,
-          "desestimado": 62,
-          "total": 2259
+          "se_contacta": 1030,
+          "no_se_contacta": 1046,
+          "sin_cubrir": 276,
+          "desestimado": 63,
+          "total": 2415
         },
         "Colaborativa / 911": {
-          "se_contacta": 571,
-          "no_se_contacta": 603,
-          "sin_cubrir": 26,
-          "desestimado": 624,
-          "total": 1824
+          "se_contacta": 535,
+          "no_se_contacta": 566,
+          "sin_cubrir": 104,
+          "desestimado": 545,
+          "total": 1750
         },
         "Espontáneas": {
-          "se_contacta": 311,
-          "no_se_contacta": 56,
-          "sin_cubrir": 0,
-          "desestimado": 11,
-          "total": 378
+          "se_contacta": 323,
+          "no_se_contacta": 86,
+          "sin_cubrir": 1,
+          "desestimado": 6,
+          "total": 416
         },
         "Particulares": {
-          "se_contacta": 34,
-          "no_se_contacta": 21,
-          "sin_cubrir": 1,
+          "se_contacta": 42,
+          "no_se_contacta": 33,
+          "sin_cubrir": 0,
           "desestimado": 0,
-          "total": 56
+          "total": 75
         }
       }
     }

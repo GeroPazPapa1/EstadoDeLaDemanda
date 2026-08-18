@@ -54,17 +54,22 @@ MESES = {
 }
 
 
+PATRONES_EXCEL = ("estado de la demanda*.xlsx", "personas_*.xlsx")
+
+
 def encontrar_excel_mas_reciente() -> Path:
-    candidatos = sorted(
-        BASE_DIR.glob("estado de la demanda*.xlsx"),
-        key=lambda ruta: ruta.stat().st_mtime,
-        reverse=True,
-    )
+    candidatos = [
+        ruta
+        for patron in PATRONES_EXCEL
+        for ruta in BASE_DIR.glob(patron)
+    ]
+
+    candidatos.sort(key=lambda ruta: ruta.stat().st_mtime, reverse=True)
 
     if not candidatos:
         raise FileNotFoundError(
-            "No se encontró ningún archivo "
-            "'estado de la demanda*.xlsx' en la carpeta del proyecto."
+            "No se encontró ningún archivo Excel de origen "
+            f"({' / '.join(PATRONES_EXCEL)}) en la carpeta del proyecto."
         )
 
     return candidatos[0]
