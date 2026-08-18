@@ -1,0 +1,95 @@
+{
+  "semana_label": "Semana del 03 al 09 de agosto de 2026",
+  "fecha_desde": "2026-08-03",
+  "fecha_hasta": "2026-08-09",
+  "archivo_origen": "estado de la demanda 3 agosto.xlsx",
+  "total": {
+    "se_contacta": 3310,
+    "no_se_contacta": 2774,
+    "sin_cubrir": 112,
+    "desestimado": 800,
+    "total": 6996
+  },
+  "zonas": {
+    "priorizada": {
+      "nombre": "Zona priorizada (C. 2 - 13 - 14)",
+      "resumen": {
+        "se_contacta": 1361,
+        "no_se_contacta": 1015,
+        "sin_cubrir": 0,
+        "desestimado": 103,
+        "total": 2479
+      },
+      "canales": {
+        "108": {
+          "se_contacta": 481,
+          "no_se_contacta": 483,
+          "sin_cubrir": 0,
+          "desestimado": 19,
+          "total": 983
+        },
+        "Colaborativa / 911": {
+          "se_contacta": 417,
+          "no_se_contacta": 460,
+          "sin_cubrir": 0,
+          "desestimado": 83,
+          "total": 960
+        },
+        "Espontáneas": {
+          "se_contacta": 442,
+          "no_se_contacta": 32,
+          "sin_cubrir": 0,
+          "desestimado": 0,
+          "total": 474
+        },
+        "Particulares": {
+          "se_contacta": 21,
+          "no_se_contacta": 40,
+          "sin_cubrir": 0,
+          "desestimado": 1,
+          "total": 62
+        }
+      }
+    },
+    "resto": {
+      "nombre": "Resto de la ciudad",
+      "resumen": {
+        "se_contacta": 1949,
+        "no_se_contacta": 1759,
+        "sin_cubrir": 112,
+        "desestimado": 697,
+        "total": 4517
+      },
+      "canales": {
+        "108": {
+          "se_contacta": 1033,
+          "no_se_contacta": 1079,
+          "sin_cubrir": 85,
+          "desestimado": 62,
+          "total": 2259
+        },
+        "Colaborativa / 911": {
+          "se_contacta": 571,
+          "no_se_contacta": 603,
+          "sin_cubrir": 26,
+          "desestimado": 624,
+          "total": 1824
+        },
+        "Espontáneas": {
+          "se_contacta": 311,
+          "no_se_contacta": 56,
+          "sin_cubrir": 0,
+          "desestimado": 11,
+          "total": 378
+        },
+        "Particulares": {
+          "se_contacta": 34,
+          "no_se_contacta": 21,
+          "sin_cubrir": 1,
+          "desestimado": 0,
+          "total": 56
+        }
+      }
+    }
+  }
+}
