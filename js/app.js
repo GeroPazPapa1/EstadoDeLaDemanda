@@ -23,6 +23,8 @@ const elementos = {
   kpiDesestimado: document.querySelector("#kpiDesestimado"),
   kpiDesestimadoLabel: document.querySelector("#kpiDesestimadoLabel"),
   columnasZonas: document.querySelector("#columnasZonas"),
+  dashboardContainer: document.querySelector(".dashboard-container"),
+  btnExportar: document.querySelector("#btnExportar"),
 };
 
 function formatearNumero(valor) {
@@ -170,6 +172,32 @@ function mostrarError(error) {
   `;
 }
 
+async function exportarImagen() {
+  elementos.btnExportar.disabled = true;
+  elementos.btnExportar.textContent = "Generando...";
+  elementos.btnExportar.style.visibility = "hidden";
+
+  try {
+    const canvas = await html2canvas(elementos.dashboardContainer, {
+      scale: 2,
+      backgroundColor: "#ffffff",
+    });
+
+    const enlace = document.createElement("a");
+    enlace.download = `estado-demanda_${new Date().toISOString().slice(0, 10)}.png`;
+    enlace.href = canvas.toDataURL("image/png");
+    enlace.click();
+  } catch (error) {
+    console.error(error);
+    alert("No se pudo generar la imagen.");
+  } finally {
+    elementos.btnExportar.style.visibility = "visible";
+    elementos.btnExportar.disabled = false;
+    elementos.btnExportar.textContent = "Exportar imagen";
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   cargarDatos().catch(mostrarError);
+  elementos.btnExportar.addEventListener("click", exportarImagen);
 });
