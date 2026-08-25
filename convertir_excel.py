@@ -11,7 +11,8 @@ BASE_DIR = Path(__file__).resolve().parent
 JSON_PATH = BASE_DIR / "data" / "estado_demanda.json"
 HOJA_DATOS = "Personas"
 
-COMUNAS_PRIORIZADAS = {"2", "13", "14"}
+CORREDOR_NORTE = {"1A", "2", "13", "14"}
+CORREDOR_CENTRO = {"12", "15", "3", "5", "6"}
 
 # El campo "grupo_manual" del origen a veces trae acentos mal
 # codificados (ej. "Espont�neas"), por eso se matchea por
@@ -113,7 +114,12 @@ def acumular(resumen: dict[str, int], df: pd.DataFrame) -> dict[str, int]:
     return resumen
 
 
-def construir_bloque_zona(df_zona: pd.DataFrame, nombre: str) -> dict[str, object]:
+def construir_bloque_zona(
+    df_zona: pd.DataFrame,
+    id_zona: str,
+    nombre: str,
+    estilo: str,
+) -> dict[str, object]:
     resumen = acumular(resumen_vacio(), df_zona)
 
     canales: dict[str, object] = {}
@@ -126,7 +132,9 @@ def construir_bloque_zona(df_zona: pd.DataFrame, nombre: str) -> dict[str, objec
         canales[etiqueta] = acumular(resumen_vacio(), df_canal)
 
     return {
+        "id": id_zona,
         "nombre": nombre,
+        "estilo": estilo,
         "resumen": resumen,
         "canales": canales,
     }
@@ -161,7 +169,9 @@ def main() -> None:
     fecha_desde = df["fecha_inicio"].min()
     fecha_hasta = df["fecha_inicio"].max()
 
-    es_priorizada = df["comuna_calculada"].isin(COMUNAS_PRIORIZADAS)
+    es_norte = df["comuna_calculada"].isin(CORREDOR_NORTE)
+    es_centro = df["comuna_calculada"].isin(CORREDOR_CENTRO)
+    es_resto = ~es_norte & ~es_centro
 
     salida = {
         "semana_label": formatear_rango(fecha_desde, fecha_hasta),
@@ -169,16 +179,32 @@ def main() -> None:
         "fecha_hasta": fecha_hasta.strftime("%Y-%m-%d"),
         "archivo_origen": excel_path.name,
         "total": acumular(resumen_vacio(), df),
-        "zonas": {
-            "priorizada": construir_bloque_zona(
-                df[es_priorizada],
-                "Zona priorizada (C. 2 - 13 - 14)",
+        "zonas": [
+            construir_bloque_zona(
+                df[es_norte],
+                "corredor_norte",
+                "Corredor Norte · C1A, C2, C13, C14",
+                "navy",
             ),
-            "resto": construir_bloque_zona(
-                df[~es_priorizada],
-                "Resto de la ciudad",
+            construir_bloque_zona(
+                df[es_centro],
+                "corredor_centro",
+                "Corredor Centro · C12, C15, C3, C5, C6",
+                "navy",
             ),
-        },
+            construir_bloque_zona(
+                df,
+                "total_ciudad",
+                "Total de la ciudad",
+                "teal",
+            ),
+            construir_bloque_zona(
+                df[es_resto],
+                "resto",
+                "Resto de ciudad",
+                "teal",
+            ),
+        ],
     }
 
     JSON_PATH.parent.mkdir(parents=True, exist_ok=True)

@@ -166,6 +166,14 @@ body {
   color: #fecb00;
 }
 
+.column-header--teal {
+  background-color: #0e7c86;
+}
+
+.column-header--teal .total-badge {
+  color: #eafffb;
+}
+
 /* Sub KPI Cards (Middle Row) */
 .sub-kpi-row {
   display: grid;
@@ -243,6 +251,64 @@ body {
   text-align: left;
   padding-left: 8px;
   font-weight: 600;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.carousel-arrow {
+  flex: 0 0 auto;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #dcdcdc;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #082136;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-arrow:hover:not(:disabled) {
+  border-color: #004b57;
+  color: #004b57;
+}
+
+.carousel-arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.carousel .columns-grid {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.carousel-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: none;
+  background: #d7dee4;
+  cursor: pointer;
+  padding: 0;
+}
+
+.carousel-dot.is-active {
+  background: #082136;
 }
 
 .empty-state {

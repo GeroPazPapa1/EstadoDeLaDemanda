@@ -25,7 +25,15 @@ const elementos = {
   columnasZonas: document.querySelector("#columnasZonas"),
   dashboardContainer: document.querySelector(".dashboard-container"),
   btnExportar: document.querySelector("#btnExportar"),
+  carruselPrev: document.querySelector("#carruselPrev"),
+  carruselNext: document.querySelector("#carruselNext"),
+  carruselDots: document.querySelector("#carruselDots"),
 };
+
+const ZONAS_POR_PAGINA = 2;
+
+let paginasZonas = [];
+let paginaActual = 0;
 
 function formatearNumero(valor) {
   return valor.toLocaleString("es-AR");
@@ -121,9 +129,11 @@ function construirTablaCanales(canales) {
 }
 
 function construirColumnaZona(zona) {
+  const claseHeader = zona.estilo === "teal" ? " column-header--teal" : "";
+
   return `
     <div class="column-box">
-      <div class="column-header">
+      <div class="column-header${claseHeader}">
         <span>${zona.nombre}</span>
         <span class="total-badge">Total demanda: ${formatearNumero(zona.resumen.total)}</span>
       </div>
@@ -137,10 +147,52 @@ function construirColumnaZona(zona) {
   `;
 }
 
+function agruparEnPaginas(zonas, tamano) {
+  const paginas = [];
+
+  for (let indice = 0; indice < zonas.length; indice += tamano) {
+    paginas.push(zonas.slice(indice, indice + tamano));
+  }
+
+  return paginas;
+}
+
+function renderizarPaginaActual() {
+  const pagina = paginasZonas[paginaActual] || [];
+
+  elementos.columnasZonas.innerHTML = pagina
+    .map((zona) => construirColumnaZona(zona))
+    .join("");
+
+  elementos.carruselPrev.disabled = paginaActual === 0;
+  elementos.carruselNext.disabled = paginaActual === paginasZonas.length - 1;
+
+  elementos.carruselDots.innerHTML = paginasZonas
+    .map((_, indice) => `
+      <button
+        type="button"
+        class="carousel-dot${indice === paginaActual ? " is-active" : ""}"
+        data-pagina="${indice}"
+        aria-label="Ir a la página ${indice + 1}"
+      ></button>
+    `)
+    .join("");
+}
+
+function irAPagina(indice) {
+  if (indice < 0 || indice >= paginasZonas.length) {
+    return;
+  }
+
+  paginaActual = indice;
+  renderizarPaginaActual();
+}
+
 function renderizarZonas(datos) {
-  elementos.columnasZonas.innerHTML =
-    construirColumnaZona(datos.zonas.priorizada) +
-    construirColumnaZona(datos.zonas.resto);
+  paginasZonas = agruparEnPaginas(datos.zonas, ZONAS_POR_PAGINA);
+  paginaActual = 0;
+
+  renderizarPaginaActual();
 }
 
 function renderizarSubtitulo(datos) {
@@ -200,4 +252,15 @@ async function exportarImagen() {
 document.addEventListener("DOMContentLoaded", () => {
   cargarDatos().catch(mostrarError);
   elementos.btnExportar.addEventListener("click", exportarImagen);
+
+  elementos.carruselPrev.addEventListener("click", () => irAPagina(paginaActual - 1));
+  elementos.carruselNext.addEventListener("click", () => irAPagina(paginaActual + 1));
+
+  elementos.carruselDots.addEventListener("click", (evento) => {
+    const boton = evento.target.closest("[data-pagina]");
+
+    if (boton) {
+      irAPagina(Number(boton.dataset.pagina));
+    }
+  });
 });
