@@ -201,7 +201,7 @@ def main() -> None:
             construir_bloque_zona(
                 df[es_resto],
                 "resto",
-                "Resto de ciudad",
+                "Resto de ciudad (Comunas 1, 4, 7, 8, 9, 10, 11)",
                 "teal",
             ),
         ],

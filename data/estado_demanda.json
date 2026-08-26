@@ -139,7 +139,7 @@
     },
     {
       "id": "resto",
-      "nombre": "Resto de ciudad",
+      "nombre": "Resto de ciudad (Comunas 1, 4, 7, 8, 9, 10, 11)",
       "estilo": "teal",
       "resumen": {
         "se_contacta": 751,
