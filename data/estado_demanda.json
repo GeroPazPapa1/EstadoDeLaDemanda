@@ -1,14 +1,14 @@
 {
-  "semana_label": "Semana del 17 al 23 de agosto de 2026",
-  "fecha_desde": "2026-08-17",
-  "fecha_hasta": "2026-08-23",
-  "archivo_origen": "personas_20260817_20260823.xlsx",
+  "semana_label": "Semana del 24 al 30 de agosto de 2026",
+  "fecha_desde": "2026-08-24",
+  "fecha_hasta": "2026-08-30",
+  "archivo_origen": "personas_20260824_20260830.xlsx",
   "total": {
-    "se_contacta": 3006,
-    "no_se_contacta": 2370,
-    "sin_cubrir": 557,
-    "desestimado": 822,
-    "total": 6755
+    "se_contacta": 3433,
+    "no_se_contacta": 2604,
+    "sin_cubrir": 273,
+    "desestimado": 706,
+    "total": 7016
   },
   "zonas": [
     {
@@ -16,40 +16,40 @@
       "nombre": "Corredor Norte · C1A, C2, C13, C14",
       "estilo": "navy",
       "resumen": {
-        "se_contacta": 1557,
-        "no_se_contacta": 1087,
-        "sin_cubrir": 60,
-        "desestimado": 237,
-        "total": 2941
+        "se_contacta": 1638,
+        "no_se_contacta": 1171,
+        "sin_cubrir": 26,
+        "desestimado": 183,
+        "total": 3018
       },
       "canales": {
         "108": {
-          "se_contacta": 633,
-          "no_se_contacta": 510,
-          "sin_cubrir": 40,
-          "desestimado": 7,
-          "total": 1190
+          "se_contacta": 603,
+          "no_se_contacta": 565,
+          "sin_cubrir": 17,
+          "desestimado": 13,
+          "total": 1198
         },
         "Colaborativa / 911": {
-          "se_contacta": 431,
-          "no_se_contacta": 462,
-          "sin_cubrir": 19,
-          "desestimado": 228,
-          "total": 1140
+          "se_contacta": 503,
+          "no_se_contacta": 522,
+          "sin_cubrir": 9,
+          "desestimado": 167,
+          "total": 1201
         },
         "Espontáneas": {
-          "se_contacta": 448,
-          "no_se_contacta": 32,
-          "sin_cubrir": 1,
-          "desestimado": 2,
-          "total": 483
+          "se_contacta": 500,
+          "no_se_contacta": 30,
+          "sin_cubrir": 0,
+          "desestimado": 1,
+          "total": 531
         },
         "Particulares": {
-          "se_contacta": 45,
-          "no_se_contacta": 83,
+          "se_contacta": 32,
+          "no_se_contacta": 54,
           "sin_cubrir": 0,
-          "desestimado": 0,
-          "total": 128
+          "desestimado": 2,
+          "total": 88
         }
       }
     },
@@ -58,40 +58,40 @@
       "nombre": "Corredor Centro · C12, C15, C3, C5, C6",
       "estilo": "navy",
       "resumen": {
-        "se_contacta": 698,
-        "no_se_contacta": 536,
-        "sin_cubrir": 104,
-        "desestimado": 236,
-        "total": 1574
+        "se_contacta": 873,
+        "no_se_contacta": 580,
+        "sin_cubrir": 60,
+        "desestimado": 205,
+        "total": 1718
       },
       "canales": {
         "108": {
-          "se_contacta": 360,
-          "no_se_contacta": 314,
-          "sin_cubrir": 86,
-          "desestimado": 11,
-          "total": 771
+          "se_contacta": 402,
+          "no_se_contacta": 348,
+          "sin_cubrir": 43,
+          "desestimado": 9,
+          "total": 802
         },
         "Colaborativa / 911": {
-          "se_contacta": 172,
-          "no_se_contacta": 189,
+          "se_contacta": 240,
+          "no_se_contacta": 208,
           "sin_cubrir": 17,
-          "desestimado": 221,
-          "total": 599
+          "desestimado": 195,
+          "total": 660
         },
         "Espontáneas": {
-          "se_contacta": 145,
-          "no_se_contacta": 18,
-          "sin_cubrir": 1,
-          "desestimado": 3,
-          "total": 167
+          "se_contacta": 187,
+          "no_se_contacta": 16,
+          "sin_cubrir": 0,
+          "desestimado": 0,
+          "total": 203
         },
         "Particulares": {
-          "se_contacta": 21,
-          "no_se_contacta": 15,
+          "se_contacta": 44,
+          "no_se_contacta": 8,
           "sin_cubrir": 0,
           "desestimado": 1,
-          "total": 37
+          "total": 53
         }
       }
     },
@@ -100,40 +100,40 @@
       "nombre": "Total de la ciudad",
       "estilo": "teal",
       "resumen": {
-        "se_contacta": 3006,
-        "no_se_contacta": 2370,
-        "sin_cubrir": 557,
-        "desestimado": 822,
-        "total": 6755
+        "se_contacta": 3433,
+        "no_se_contacta": 2604,
+        "sin_cubrir": 273,
+        "desestimado": 706,
+        "total": 7016
       },
       "canales": {
         "108": {
-          "se_contacta": 1361,
-          "no_se_contacta": 1298,
-          "sin_cubrir": 409,
-          "desestimado": 37,
-          "total": 3105
+          "se_contacta": 1495,
+          "no_se_contacta": 1472,
+          "sin_cubrir": 197,
+          "desestimado": 34,
+          "total": 3198
         },
         "Colaborativa / 911": {
-          "se_contacta": 856,
-          "no_se_contacta": 906,
-          "sin_cubrir": 145,
-          "desestimado": 778,
-          "total": 2685
+          "se_contacta": 1039,
+          "no_se_contacta": 1005,
+          "sin_cubrir": 76,
+          "desestimado": 667,
+          "total": 2787
         },
         "Espontáneas": {
-          "se_contacta": 702,
-          "no_se_contacta": 60,
-          "sin_cubrir": 3,
-          "desestimado": 5,
-          "total": 770
+          "se_contacta": 798,
+          "no_se_contacta": 62,
+          "sin_cubrir": 0,
+          "desestimado": 1,
+          "total": 861
         },
         "Particulares": {
-          "se_contacta": 87,
-          "no_se_contacta": 106,
+          "se_contacta": 101,
+          "no_se_contacta": 65,
           "sin_cubrir": 0,
-          "desestimado": 2,
-          "total": 195
+          "desestimado": 4,
+          "total": 170
         }
       }
     },
@@ -142,40 +142,40 @@
       "nombre": "Resto de ciudad (Comunas 1, 4, 7, 8, 9, 10, 11)",
       "estilo": "teal",
       "resumen": {
-        "se_contacta": 751,
-        "no_se_contacta": 747,
-        "sin_cubrir": 393,
-        "desestimado": 349,
-        "total": 2240
+        "se_contacta": 922,
+        "no_se_contacta": 853,
+        "sin_cubrir": 187,
+        "desestimado": 318,
+        "total": 2280
       },
       "canales": {
         "108": {
-          "se_contacta": 368,
-          "no_se_contacta": 474,
-          "sin_cubrir": 283,
-          "desestimado": 19,
-          "total": 1144
+          "se_contacta": 490,
+          "no_se_contacta": 559,
+          "sin_cubrir": 137,
+          "desestimado": 12,
+          "total": 1198
         },
         "Colaborativa / 911": {
-          "se_contacta": 253,
-          "no_se_contacta": 255,
-          "sin_cubrir": 109,
-          "desestimado": 329,
-          "total": 946
+          "se_contacta": 296,
+          "no_se_contacta": 275,
+          "sin_cubrir": 50,
+          "desestimado": 305,
+          "total": 926
         },
         "Espontáneas": {
-          "se_contacta": 109,
-          "no_se_contacta": 10,
-          "sin_cubrir": 1,
+          "se_contacta": 111,
+          "no_se_contacta": 16,
+          "sin_cubrir": 0,
           "desestimado": 0,
-          "total": 120
+          "total": 127
         },
         "Particulares": {
-          "se_contacta": 21,
-          "no_se_contacta": 8,
+          "se_contacta": 25,
+          "no_se_contacta": 3,
           "sin_cubrir": 0,
           "desestimado": 1,
-          "total": 30
+          "total": 29
         }
       }
     }
